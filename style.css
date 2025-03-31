@@ -2,13 +2,24 @@
   margin: 0;
   padding: 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 :root {
-  --nav-bg-color: #1e2448;
-  --footer-bg-color: #505a89;
-  --external-components-padding: 0 3%;
+  --dark-blue-color: #1e2448;
+  --light-blue-color: #505a89;
+  --external-components-padding: 0 2vw;
+
+  --padding-global: 0 2vw;
+  --padding-main: 5vh 2.5vw;
+  --gap: 20px;
+  --nav-height: 13vh;
+  --footer-height: 15vh;
+  --card-size: 200px;
+  --card-border-radius: 7px;
+  --card-padding: 15px;
+  --button-padding: 8px 20px;
+  --button-border-radius: 5px;
 }
 
 a {
@@ -18,13 +29,16 @@ a {
 
 /*  NAV BAR  */
 nav {
-  background-color: var(--nav-bg-color);
+  background-color: var(--dark-blue-color);
   padding: var(--external-components-padding);
   height: 13vh;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  position: sticky;
+  top: 0;
 }
 
 nav .left-menu {
@@ -35,9 +49,9 @@ nav .left-menu {
 /*  MAIN BODY  */
 main {
   display: flex;
+  justify-content: space-between;
   
-  justify-content: space-evenly;
-  padding: 30px 40px;
+  padding: 5vh 2.5vw;
 }
 
 /* Filter Section */
@@ -57,7 +71,7 @@ main h2 {
 }
 
 main .filter button {
-  background-color: #1e2448;
+  background-color: var(--dark-blue-color);
   color: white;
   padding: 8px 20px;
   border-radius: 5px;
@@ -71,7 +85,6 @@ main .items {
   display: flex;
   flex-direction: column;
   gap: 20px
-  
 }
 
 main .items button {
@@ -79,14 +92,27 @@ main .items button {
   padding: 6px;
 }
 
+main article.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1vh ;
+  padding: 0 0 5vh;
+}
+
 main div.card {
   border-radius: 7px;
-  width: 200px;
+  width: min-content;
   border: solid 3px;
   padding: 15px;
+  text-align: center;
+
   display: flex;
   flex-direction: column;
-  text-align: center;
+}
+
+main div.card h2 {
+  padding: 7px;
 }
 
 main div.card img {
@@ -101,23 +127,20 @@ main div.card img {
   font-size: 26px;
 }
 
-main article.productos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-}
-
 /*  Footer  */
 
 footer {
   height: 15vh;
-  background-color: var(--footer-bg-color);
+  background-color: var(--light-blue-color);
   padding: var(--external-components-padding);
   color: white;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  position: sticky;
+  bottom: 0;
 }
 
 footer .info {
