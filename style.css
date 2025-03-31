@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 16px;
+}
+
+:root {
+  --nav-bg-color: #1e2448;
+  --footer-bg-color: #505a89;
+  --external-components-padding: 0 3%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/*  NAV BAR  */
+nav {
+  background-color: var(--nav-bg-color);
+  padding: var(--external-components-padding);
+  height: 13vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .left-menu {
+  display: flex;
+  gap: 20px
+}
+
+/*  MAIN BODY  */
+main {
+  display: flex;
+  
+  justify-content: space-evenly;
+  padding: 30px 40px;
+}
+
+/* Filter Section */
+
+main .filter {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main h1 {
+  font-size: 26px;
+}
+
+main h2 {
+  font-size: 21px;
+}
+
+main .filter button {
+  background-color: #1e2448;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 5px;
+  width: max-content;
+  border: none;
+}
+
+/* Items Section */
+
+main .items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+  
+}
+
+main .items button {
+  text-align: center;
+  padding: 6px;
+}
+
+main div.card {
+  border-radius: 7px;
+  width: 200px;
+  border: solid 3px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+main div.card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 7px;
+  background-color: lightgray;
+
+  text-align: center;
+  color: gray;
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+main article.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/*  Footer  */
+
+footer {
+  height: 15vh;
+  background-color: var(--footer-bg-color);
+  padding: var(--external-components-padding);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer .info {
+  display: flex;
+  gap: 10px;
+}
+
+footer .copyright {
+  align-self: center;
+}
